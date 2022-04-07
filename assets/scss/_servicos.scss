@@ -1,0 +1,112 @@
+.servicos{
+    background: #000000;
+    color: #fff;
+    padding: 3rem 0 6rem 0;
+    @include tablet{
+        padding: 1.5rem 0 4rem 0;
+    }
+    .chamada{
+        text-align: center;
+        h2{
+            font-family: acier;
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            @include tablet{
+                font-size: 1.5rem;
+                margin-bottom: 1.3rem;
+            }
+            
+        }
+        p{
+            font-family: tt;
+            font-size: 1.15rem;
+            max-width: 455px;
+            margin: 0 auto;
+            @include tablet{
+                line-height: 17px;
+                font-size: .9rem;
+            }
+        }
+    }
+    .cont-servicos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 2.5rem;
+        @include tablet{
+            justify-content: center;
+        }
+        .item-servico{
+            width: 18.5%;
+            position: relative;
+            margin: 0 .5rem .5rem .5rem; 
+
+            @include tablet{
+                width: 85%;
+                margin-bottom: .5rem;
+            }
+            &:hover{
+                .conteudo{
+                    opacity: 1;
+                }
+            }
+            .titulo{
+                background: #1C1C1C;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 205px;
+                flex-direction: column;
+                @include tablet{
+                    display: none;
+                }
+                h3{
+                    color: #FFFFFF;
+                    font-family: acier;
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+            .conteudo{
+                // display: none;
+                background: #110F0F;
+                padding: 1rem .5rem;
+                text-align: center;
+                height: 205px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                z-index: 2;
+                opacity: 0;
+                transition: all ease-in-out .5s;
+                width: 100%;
+                flex-direction: column;
+                @include tablet{
+                    opacity: 1;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                }
+                h3{
+                    display: none;
+                    @include tablet{
+                        display: block;
+                        color: #FFFFFF;
+                        font-family: acier;
+                        font-size: 1rem;
+                    }
+                }
+                p{
+                    font-family: tt;
+                    color: #fff;
+                    margin-bottom: 0;
+                    font-size: .85rem;
+                }
+            }
+        }
+    }
+}

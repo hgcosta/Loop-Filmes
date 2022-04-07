@@ -1,0 +1,70 @@
+header {
+  z-index: 9999;
+  background: #fff;
+  width: 100%;
+  // transition: all ease-in-out .5s;
+  .cont-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      img {
+        width: 120px;
+        height: 50px;
+      }
+    }
+    .menu-desktop {
+      @include tablet {
+        display: none;
+      }
+      ul {
+        display: flex;
+        margin-bottom: 0;
+        li {
+          margin: 0 0.5rem;
+          a {
+            color: #707070;
+            font-family: tt;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .menu-icon {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  animation: opct 0.5s ease-in-out;
+  @include tablet {
+    position: inherit;
+  }
+  .logo {
+    img {
+      width: 90px !important;
+    }
+  }
+}
+
+@keyframes opct {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.certifica {
+  @include tablet {
+    display: none;
+  }
+}

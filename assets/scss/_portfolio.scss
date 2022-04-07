@@ -1,0 +1,148 @@
+.portfolio-desktop{
+    padding: 3rem 0;
+    @include tablet{
+       display:none;
+       
+    }
+    .info-portfolio{
+        h2{
+            // text-align: center;
+            color: #707070;
+            font-family: acier;
+            font-size: 2.3rem;
+            margin-bottom: 0;
+            @include tablet{
+                text-align: center;
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+        .lista-nav{
+            display: flex;
+            margin-top: 1.5rem;
+            @include tablet{
+                flex-direction: column;
+                align-items: center;
+                margin-top: .5rem;
+
+            }
+            li{
+                width: 270px;
+                border: solid 1px #707070;
+                /* height: 53px; */
+                text-align: center;
+                font-family: acier;
+                padding: .6rem;
+                color: #6C6C6C;
+                text-decoration: none;
+                transition: all ease-in-out .5s;
+                margin: 0 .25rem;
+                cursor: pointer;
+                @include tablet{
+                    margin-bottom: .5rem;
+                    font-size: .8rem;
+                    width: 200px;
+                }
+                &:hover{
+                    background: #1E1E1E;
+                    color: #fff;
+                }
+            }
+            .ativo-lista-servicos{
+                background: #1E1E1E;
+                color: #fff;
+            }
+        }
+    }
+    .conteudo-servico{
+        margin-top: 3rem;
+        display: flex;
+        // justify-content: center;
+        flex-wrap: wrap;
+        .item-portfolio{
+            width: 15.8%;
+            height: 175px;
+            margin: .25rem;
+            @include tablet{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            iframe{
+                width: 100%;
+                height: 175px;
+            }
+        }
+    }
+}
+
+.js-tabContentServicos{
+    section{
+        display: none!important;
+    }
+    .ativo-content-servicos{
+        display: flex!important;
+        animation:  show .5s forwards;
+
+    }
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0,);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0,);
+    }
+}
+
+// A partir daqui começa portfólio apenas de mobile
+.portfolio-mobile{
+    padding: 1.5rem 0;
+    display: none;
+    @include tablet{
+        display: block;
+    }
+    h2{
+        color: #707070;
+        font-family: acier;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-left: 15px;
+    }
+    .cont-portfolio-mobile{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        article{
+            width: 100%;
+            height:210px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            margin-bottom: .5rem;
+            .img-mobile-destaque{
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .legenda-mobile-destaque{
+                position: absolute;
+                h3{
+                    font-family: acier;
+                    color: #fff;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

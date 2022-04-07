@@ -1,0 +1,37 @@
+
+@import 'responsivo';
+@import 'geral';
+@import 'footer';
+@import 'header';
+@import 'home';
+@import 'quem-somos';
+@import 'servicos';
+@import 'menu';
+@import 'instagram';
+@import 'portfolio';
+@import 'contato';
+
+//#1C1C1C
+//#6C6C6C
+//#707070
+//#00000029
+//#343434
+//#1E1E1E
+
+html {scroll-behavior: smooth;}
+@font-face {
+    font-family: acier;
+    src: url('fonts/Acier-DisplaySolid.ttf');
+}
+@font-face {
+    font-family: tt;
+    src: url('fonts/TTCommons-Regular.ttf');
+}
+@font-face {
+    font-family: tt-bold;
+    src: url('fonts/TTCommons-Bold.ttf');
+}
+@font-face {
+    font-family: roboto-regular;
+    src: url('fonts/Roboto-Regular.ttf');
+}
